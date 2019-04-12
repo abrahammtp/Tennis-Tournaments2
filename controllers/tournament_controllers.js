@@ -24,16 +24,17 @@ module.exports = function (app) {
         }).then(function (data) {
             res.json(data);
         });
-        app.put("/api/tourneys/:id", function (req, res) {
-            db.Tourneys.update({
-                attended: req.body.attendance
-            }, {
-                    where: {
-                        id: req.body.id
-                    }
-                }).then(function (dbTourney) {
-                    res.json(dbTourney);
-                })
-        });
     });
+    app.put("/api/tourneys/:id", function (req, res) {
+        db.Tourneys.update({
+            attended: req.body.attendance
+        }, {
+                where: {
+                    id: req.params.id
+                }
+            }).then(function (dbTourney) {
+                res.json(dbTourney);
+            })
+    });
+
 }

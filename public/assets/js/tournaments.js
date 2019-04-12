@@ -6,9 +6,9 @@ $(document).ready(function () {
         var attended = $(this).data("attended");
         console.log("Changed status", attended)
         if (attended == false) {
-            attended == true
+            attended = true
         } else {
-            attended == false
+            attended = false
         }
 
         var newAttendanceState = {
