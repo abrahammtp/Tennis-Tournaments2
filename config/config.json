@@ -1,0 +1,25 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "tournaments_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "port": 8889
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "rahj3yoj7lwhafkf",
+    "password": "e2vpy5otf97ob0z2",
+    "database": "lm3a6nalp1bqhjpa",
+    "host": "j1r4n2ztuwm0bhh5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "port": 3306
+  }
+}

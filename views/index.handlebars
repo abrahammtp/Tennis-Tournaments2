@@ -1,0 +1,42 @@
+<div class="container">
+    <h2>Add a tournament you wish to attend!</h2>
+    <br>
+    <form class="create-form" method="POST" action="/api/tourneys">
+
+        <div class="form-group">
+            <label for="ca">Tournament Name:</label>
+            <input type="text" id="tournament" name="name">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="attended">Already attended?</label><br>
+            <br>
+            <input type="radio" name="attended" value="0" checked> Haven't attended!<br>
+            <input type="radio" name="attended" value="1" checked> Attended!<br>
+        </div>
+        <br>
+
+        <button type="submit" class="add-tournament">Add Tournament</button>
+    </form>
+
+    <br>
+
+    <ul>
+        {{#each tourneys}}
+        {{#if attended}}
+        <li class="change-status" data-id="{{id}}" data-attended="{{attended}}">
+            {{ name }}
+        </li>
+        {{/if}}
+        {{/each}}
+    </ul>
+    <ul>
+        {{#each tourneys}}
+        {{#unless attended}}
+        <button class="change-status" data-id="{{id}}" data-attended="{{attended}}">
+            {{ name }}
+        </button>
+        {{/unless}}
+        {{/each}}
+    </ul>
+</div>

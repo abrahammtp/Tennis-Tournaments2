@@ -1,0 +1,31 @@
+{
+  "name": "tennis-tournaments2",
+  "version": "1.0.0",
+  "description": "We are going to refactor our Tennis Tournament activity using Sequelize.",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abrahammtp/Tennis-Tournaments2.git"
+  },
+  "keywords": [
+    "Sequelize",
+    "npm",
+    "mySQL2",
+    "express-handlebars",
+    "JawsDB",
+    "Heroku"
+  ],
+  "author": "Abraham Torres Pinto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abrahammtp/Tennis-Tournaments2/issues"
+  },
+  "homepage": "https://github.com/abrahammtp/Tennis-Tournaments2#readme",
+  "dependencies": {
+    "express-handlebars": "^3.0.2"
+  }
+}
