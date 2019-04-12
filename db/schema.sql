@@ -1,5 +1,5 @@
-CREATE DATABASE tournaments_db;
-USE tournaments_db;
+CREATE DATABASE tournaments2_db;
+USE tournaments2_db;
 
 CREATE TABLE tourneys
 (
