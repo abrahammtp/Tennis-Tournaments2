@@ -27,6 +27,7 @@
   "homepage": "https://github.com/abrahammtp/Tennis-Tournaments2#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.2"
+    "express-handlebars": "^3.0.2",
+    "sequelize": "^5.3.5"
   }
 }
