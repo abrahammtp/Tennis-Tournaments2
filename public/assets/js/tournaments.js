@@ -1,14 +1,14 @@
-$(function () {
+$(document).ready(function () {
     // When we click on change-status (each tournament), we are going to send the PUT request
     $(".change-status").on("click", function (event) {
         event.preventDefault();
         var id = $(this).data("id");
         var attended = $(this).data("attended");
         console.log("Changed status", attended)
-        if (attended == true) {
-            attended == false
-        } else {
+        if (attended == false) {
             attended == true
+        } else {
+            attended == false
         }
 
         var newAttendanceState = {

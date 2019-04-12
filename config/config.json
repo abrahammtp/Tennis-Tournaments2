@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "tournaments_db",
+    "database": "tournaments2_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "port": 8889
@@ -15,10 +15,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "rahj3yoj7lwhafkf",
-    "password": "e2vpy5otf97ob0z2",
-    "database": "lm3a6nalp1bqhjpa",
-    "host": "j1r4n2ztuwm0bhh5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "ngvgcoxn8m4fsn3d",
+    "password": "w3gzgeqfu83jdkfv",
+    "database": "z60q7zdi6674wixn",
+    "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "port": 3306
   }

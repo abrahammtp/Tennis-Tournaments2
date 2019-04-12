@@ -11,9 +11,10 @@ var db = require("../models/index.js");
 module.exports = function (app) {
     app.get("/", function (req, res) {
         db.Tourneys.findAll({}).then(function (data) {
-            res.json(data);
-        }).catch(function (err) {
-            res.json(err)
+            let object = {
+                tourneys: data
+            };
+            res.render("index", object);
         })
     });
     app.post("/api/tourneys", function (req, res) {
@@ -23,19 +24,16 @@ module.exports = function (app) {
         }).then(function (data) {
             res.json(data);
         });
-    app.put("/api/tourneys/:id", function (req, res) {
-        var condition = "id = " + req.params.id;
-
-        db.Tourneys.update({
-            attended: true
-        }, condition, function (result) {
-            if (result.changedRows == 0) {
-                // If no rows were changed, that means the ID does not exist so we throw a 404 error
-               return res.status(404).end();
-               } else {
-                    res.status(200).end();
-                }
-            });
+        app.put("/api/tourneys/:id", function (req, res) {
+            db.Tourneys.update({
+                attended: req.body.attendance
+            }, {
+                    where: {
+                        id: req.body.id
+                    }
+                }).then(function (dbTourney) {
+                    res.json(dbTourney);
+                })
         });
     });
-};
+}
